@@ -29,3 +29,11 @@ then just double click on the main.py or run
 `python main.py`
 
 In a Terminal
+
+
+#### Job need doing
+1. Make new icon
+2. Make new splash screen
+3. Make backend asynchronous
+4. Add syntax highlighting
+5. Add a way to code snippets to file

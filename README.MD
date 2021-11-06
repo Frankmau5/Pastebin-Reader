@@ -31,7 +31,7 @@ then just double click on the main.py or run
 In a Terminal
 
 
-#### Job need doing
+### Jobs need doing
 1. Make new icon
 2. Make new splash screen
 3. Make backend asynchronous

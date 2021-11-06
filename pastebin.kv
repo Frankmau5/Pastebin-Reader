@@ -1,0 +1,74 @@
+#:import MDLabel kivymd.uix.label 
+#:import MDToolbar kivymd.uix.toolbar 
+#:import MDDropdownMenu kivymd.uix.menu
+ScreenManager:
+	name:'sm'
+	Screen:
+		name:'main'
+		BoxLayout:
+			id: MainBoxlayout
+			orientation:'vertical'
+			MDToolbar:
+				id: MyToolbar
+				title: "Pastebin Reader"
+				right_action_items: [["dots-vertical", lambda x: app.MenuAboutCallback(x)]]
+			MDDropDownItem:
+			    id: drop_item
+			    pos_hint: {'center_x': .5, 'center_y': .1}
+			    text: 'Select Language'
+			    on_release: app.MenuLang.open()
+			ScrollView:
+				MDList:
+					id: myListWidget
+
+			
+	Screen:
+		name:'reader'
+		BoxLayout:
+			orientation:'vertical'
+			MDToolbar:
+				id: MyToolbar
+				title: "Pastebin Reader"
+				right_action_items: [["dots-vertical", lambda x: app.MenuAboutCallback(x)]]
+				left_action_items:[["backspace",lambda x: app.NavigationBack(x)]]
+			ScrollView:
+				MDTextField:
+					id:textbox
+					multiline:True
+	Screen:
+		name:'about'
+		BoxLayout:
+			orientation:'vertical'
+			MDToolbar:
+				id: MyToolbar
+				title: "Pastebin Reader"
+				left_action_items:[["backspace",lambda x: app.NavigationBack(x)]]
+			MDCard:
+				size_hint: None, None
+				orientation: "vertical"
+				padding: "10dp"
+				size: "380dp", "180dp"
+				pos_hint: {"center_x": .5, "center_y": .5}
+				MDLabel:
+					text: "Pastebin Reader version 0.4"
+					theme_text_color: "Secondary"
+					adaptive_height: True
+
+				MDSeparator:
+					height: "4dp"
+
+				MDLabel:
+					text: "Website: [ref=https://frankmau5.tech]Frankmau5.tech[/ref]"
+					markup: True
+					on_ref_press:
+						import webbrowser
+						webbrowser.open(args[1])
+				MDLabel:
+					text: "Support: [ref=https://paypal.me/FrankMulvie]Paypal.me[/ref]"
+					markup: True
+					on_ref_press:
+						import webbrowser
+						webbrowser.open(args[1])
+			MDLabel:
+				text: ""
+				

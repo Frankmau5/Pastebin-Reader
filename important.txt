@@ -1,0 +1,13 @@
+My App  sign apks for buildozer
+$ cd ~
+$ keytool -genkey -v -keystore ./keystores/com-mydomain-myapp.keystore -alias myalias -keyalg RSA -keysize 2048 -validity 10000
+$ cd ~/myapp
+$ buildozer android release
+$ cd ~
+$ jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore ./keystores/com-mydomain-myapp.keystore ./myapp/bin/MyApp-1.0.0-release-unsigned.apk myalias
+$ <password set during key generation in step 1>
+$ .buildozer/android/platform/android-sdk-21/tools/zipalign -v 4 ./myapp/bin/MyApp-1.0.0-release-unsigned.apk ./myapp/bin/MyApp.apk
+
+
+
+sniffio, rfc3986, h11, anyio, httpcore,

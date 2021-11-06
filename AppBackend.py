@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 from os.path import expanduser, join
 import requests
 
-s
+
 #import asyncio
 #import aiohttp
 

@@ -15,7 +15,7 @@ GPLv3 - [read here](https://github.com/Frankmau5/Pastebin-Reader/blob/main/LICEN
 #### For Android
 Download the apk file and install the apk on your device
 
-[HERE](https://github.com/Frankmau5/TRiver/releases/download/v1.0.1/main.exe)
+[HERE](https://github.com/Frankmau5/Pastebin-Reader/releases/download/0.4/pastebinReader-v0.4.apk)
 
 #### For Windows, Mac & Linux
 
